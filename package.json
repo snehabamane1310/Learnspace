@@ -1,0 +1,1 @@
+{"name":"learnspace-lms","version":"1.0.0","private":true,"scripts":{"dev":"concurrently -k \"npm run server:dev\" \"npm run client:dev\"","server:dev":"npm --prefix server run dev","client:dev":"npm --prefix client run dev","install:all":"npm install && npm --prefix server install && npm --prefix client install"},"devDependencies":{"concurrently":"^9.1.2"}}

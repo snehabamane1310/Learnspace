@@ -1,0 +1,25 @@
+LEARNSPACE LMS - LOCAL COMPILER IN VS CODE (NO DOCKER)
+
+ONE-TIME SETUP
+1. Install Node.js, Python, a JDK, and GCC/G++ (MSYS2 UCRT64).
+2. Install VS Code extensions: Python, C/C++, and Extension Pack for Java.
+3. In a new VS Code PowerShell terminal verify:
+   node --version
+   python --version
+   gcc --version
+   g++ --version
+   javac -version
+4. Copy and edit the server settings:
+   Copy-Item server\.env.example server\.env
+   notepad server\.env
+   Set MONGODB_URI to your existing database URI if you want your current courses.
+   Set a strong JWT_SECRET and admin password. CODE_RUNNER_MODE=local is selected.
+5. Install dependencies: npm run install:all
+6. Optional seed: npm --prefix server run seed
+
+EVERY TIME YOU RUN THE APP
+1. Open this folder in VS Code.
+2. Run: npm run dev
+3. Open: http://localhost:5173
+
+Local mode executes submitted programs directly on your computer, without an OS sandbox. The API binds to 127.0.0.1 and refuses local mode in production. Use it only for private local development.
